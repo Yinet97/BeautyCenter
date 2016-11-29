@@ -315,6 +315,7 @@
             this.AgregarBoton.Text = "Agregar";
             this.AgregarBoton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.AgregarBoton.UseVisualStyleBackColor = true;
+            this.AgregarBoton.Click += new System.EventHandler(this.AgregarBoton_Click);
             // 
             // SubTotalTextBox
             // 

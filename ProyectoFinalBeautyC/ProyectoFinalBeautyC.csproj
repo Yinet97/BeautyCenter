@@ -57,9 +57,12 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -71,10 +74,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Factura.cs">
+    <Compile Include="BeautyCenterDbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BeautyCenterDbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Factura.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Factura.Designer.cs">
+    <Compile Include="UI\Factura.Designer.cs">
       <DependentUpon>Factura.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
@@ -84,47 +92,47 @@
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
-    <Compile Include="Programa.cs">
+    <Compile Include="UI\Programa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Programa.Designer.cs">
+    <Compile Include="UI\Programa.Designer.cs">
       <DependentUpon>Programa.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\Consultas\ConsultaCitas.cs">
+    <Compile Include="UI\consulta\ConsultaCitas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Consultas\ConsultaCitas.Designer.cs">
+    <Compile Include="UI\consulta\ConsultaCitas.Designer.cs">
       <DependentUpon>ConsultaCitas.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Consultas\ConsultaClientes.cs">
+    <Compile Include="UI\consulta\ConsultaClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Consultas\ConsultaClientes.Designer.cs">
+    <Compile Include="UI\consulta\ConsultaClientes.Designer.cs">
       <DependentUpon>ConsultaClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Consultas\ConsultaEmpleadas.cs">
+    <Compile Include="UI\consulta\ConsultaEmpleadas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Consultas\ConsultaEmpleadas.Designer.cs">
+    <Compile Include="UI\consulta\ConsultaEmpleadas.Designer.cs">
       <DependentUpon>ConsultaEmpleadas.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Consultas\ConsultaFacturas.cs">
+    <Compile Include="UI\consulta\ConsultaFacturas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Consultas\ConsultaFacturas.Designer.cs">
+    <Compile Include="UI\consulta\ConsultaFacturas.Designer.cs">
       <DependentUpon>ConsultaFacturas.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Consultas\ConsultaServicios.cs">
+    <Compile Include="UI\consulta\ConsultaServicios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Consultas\ConsultaServicios.Designer.cs">
+    <Compile Include="UI\consulta\ConsultaServicios.Designer.cs">
       <DependentUpon>ConsultaServicios.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Consultas\ConsultaUsuarios.cs">
+    <Compile Include="UI\consulta\ConsultaUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Consultas\ConsultaUsuarios.Designer.cs">
+    <Compile Include="UI\consulta\ConsultaUsuarios.Designer.cs">
       <DependentUpon>ConsultaUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Registros\RegistroCitas.cs">
@@ -157,14 +165,26 @@
     <Compile Include="UI\Registros\RegistroTiposUsuarios.Designer.cs">
       <DependentUpon>RegistroTiposUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Reportes\ReporteCitas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Reportes\ReporteCitas.Designer.cs">
+      <DependentUpon>ReporteCitas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Reportes\ReporteClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Reportes\ReporteClientes.Designer.cs">
+      <DependentUpon>ReporteClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utilidades.cs" />
-    <EmbeddedResource Include="Factura.resx">
+    <EmbeddedResource Include="UI\Factura.resx">
       <DependentUpon>Factura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Programa.resx">
+    <EmbeddedResource Include="UI\Programa.resx">
       <DependentUpon>Programa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -177,22 +197,22 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UI\Consultas\ConsultaCitas.resx">
+    <EmbeddedResource Include="UI\consulta\ConsultaCitas.resx">
       <DependentUpon>ConsultaCitas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Consultas\ConsultaClientes.resx">
+    <EmbeddedResource Include="UI\consulta\ConsultaClientes.resx">
       <DependentUpon>ConsultaClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Consultas\ConsultaEmpleadas.resx">
+    <EmbeddedResource Include="UI\consulta\ConsultaEmpleadas.resx">
       <DependentUpon>ConsultaEmpleadas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Consultas\ConsultaFacturas.resx">
+    <EmbeddedResource Include="UI\consulta\ConsultaFacturas.resx">
       <DependentUpon>ConsultaFacturas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Consultas\ConsultaServicios.resx">
+    <EmbeddedResource Include="UI\consulta\ConsultaServicios.resx">
       <DependentUpon>ConsultaServicios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Consultas\ConsultaUsuarios.resx">
+    <EmbeddedResource Include="UI\consulta\ConsultaUsuarios.resx">
       <DependentUpon>ConsultaUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\RegistroCitas.resx">
@@ -210,6 +230,25 @@
     <EmbeddedResource Include="UI\Registros\RegistroTiposUsuarios.resx">
       <DependentUpon>RegistroTiposUsuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\Citas.rdlc" />
+    <EmbeddedResource Include="UI\Reportes\Clientes.rdlc" />
+    <EmbeddedResource Include="UI\Reportes\ReporteCitas.resx">
+      <DependentUpon>ReporteCitas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\ReporteClientes.resx">
+      <DependentUpon>ReporteClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="BeautyCenterDbDataSet.xsc">
+      <DependentUpon>BeautyCenterDbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BeautyCenterDbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BeautyCenterDbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BeautyCenterDbDataSet.xss">
+      <DependentUpon>BeautyCenterDbDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -275,16 +314,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DataBase\BeautyCenterDb.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="DataBase\BeautyCenterDb_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>BeautyCenterDb.mdf</DependentUpon>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UI\Reportes\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

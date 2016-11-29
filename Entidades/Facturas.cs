@@ -19,7 +19,7 @@ namespace Entidades
         public int Impuesto { get; set; }
         public DateTime Fecha { get; set; }
         public string TipoPago { get; set; }
-        public int ServicioId { get; set; }
+       // public int ServicioId { get; set; }
         public Double Total { get; set; }
         public Double SubTotal { get; set; }
 
