@@ -72,12 +72,12 @@ namespace BLL
             return lista;
         }
 
-        public static TiposUsuarios Buscar(int id)
+        public static Usuarios Buscar(int id)
         {
-            TiposUsuarios user = new TiposUsuarios();
+            Usuarios user = new Usuarios();
             using (var db = new BeautyCenterDb())
             {
-                user = db.TipoUsuario.Find(id);
+                user = db.Usuario.Find(id);
             }
             return user;
         }

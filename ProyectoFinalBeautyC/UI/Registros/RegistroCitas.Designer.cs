@@ -333,6 +333,7 @@
             this.Controls.Add(this.panel4);
             this.Name = "RegistroCitas";
             this.Text = "RegistroCitas";
+            this.Load += new System.EventHandler(this.RegistroCitas_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ListaCitaDataGridView)).EndInit();
             this.ClienteGroupBox.ResumeLayout(false);

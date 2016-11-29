@@ -254,6 +254,7 @@
             this.Controls.Add(this.panel4);
             this.Name = "RegistroClientes";
             this.Text = "Registro Clientes";
+            this.Load += new System.EventHandler(this.RegistroClientes_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

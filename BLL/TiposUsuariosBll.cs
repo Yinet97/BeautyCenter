@@ -8,7 +8,7 @@ using System.Data.Entity;
 
 namespace BLL
 {
-    class TiposUsuariosBll
+    public class TiposUsuariosBll
     {
         public static bool Insertar(Usuarios usuario)
         {

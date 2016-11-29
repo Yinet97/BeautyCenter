@@ -91,34 +91,34 @@
       <DependentUpon>Programa.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Registros\RegistroCitas.cs">
+    <Compile Include="UI\Registros\RegistroCitas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Registros\RegistroCitas.Designer.cs">
+    <Compile Include="UI\Registros\RegistroCitas.Designer.cs">
       <DependentUpon>RegistroCitas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Registros\RegistroClientes.cs">
+    <Compile Include="UI\Registros\RegistroClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Registros\RegistroClientes.Designer.cs">
+    <Compile Include="UI\Registros\RegistroClientes.Designer.cs">
       <DependentUpon>RegistroClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Registros\RegistroEmpleada.cs">
+    <Compile Include="UI\Registros\RegistroEmpleada.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Registros\RegistroEmpleada.Designer.cs">
+    <Compile Include="UI\Registros\RegistroEmpleada.Designer.cs">
       <DependentUpon>RegistroEmpleada.cs</DependentUpon>
     </Compile>
-    <Compile Include="Registros\RegistroServicios.cs">
+    <Compile Include="UI\Registros\RegistroServicios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Registros\RegistroServicios.Designer.cs">
+    <Compile Include="UI\Registros\RegistroServicios.Designer.cs">
       <DependentUpon>RegistroServicios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Registros\RegistroTiposUsuarios.cs">
+    <Compile Include="UI\Registros\RegistroTiposUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Registros\RegistroTiposUsuarios.Designer.cs">
+    <Compile Include="UI\Registros\RegistroTiposUsuarios.Designer.cs">
       <DependentUpon>RegistroTiposUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilidades.cs" />
@@ -141,19 +141,19 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Registros\RegistroCitas.resx">
+    <EmbeddedResource Include="UI\Registros\RegistroCitas.resx">
       <DependentUpon>RegistroCitas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Registros\RegistroClientes.resx">
+    <EmbeddedResource Include="UI\Registros\RegistroClientes.resx">
       <DependentUpon>RegistroClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Registros\RegistroEmpleada.resx">
+    <EmbeddedResource Include="UI\Registros\RegistroEmpleada.resx">
       <DependentUpon>RegistroEmpleada.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Registros\RegistroServicios.resx">
+    <EmbeddedResource Include="UI\Registros\RegistroServicios.resx">
       <DependentUpon>RegistroServicios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Registros\RegistroTiposUsuarios.resx">
+    <EmbeddedResource Include="UI\Registros\RegistroTiposUsuarios.resx">
       <DependentUpon>RegistroTiposUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

@@ -349,6 +349,7 @@
             this.Controls.Add(this.panel4);
             this.Name = "RegistroEmpleada";
             this.Text = "Registro Empleada";
+            this.Load += new System.EventHandler(this.RegistroEmpleada_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
