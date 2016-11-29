@@ -150,6 +150,7 @@
             this.BotonBuscar.TabIndex = 18;
             this.BotonBuscar.Text = "Buscar";
             this.BotonBuscar.UseVisualStyleBackColor = false;
+            this.BotonBuscar.Click += new System.EventHandler(this.BotonBuscar_Click);
             // 
             // listadoConsulta
             // 

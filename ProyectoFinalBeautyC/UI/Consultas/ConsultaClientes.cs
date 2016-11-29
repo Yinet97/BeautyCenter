@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL;
+using Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +16,29 @@ namespace ProyectoFinalBeautyC.UI.Consultas
         public ConsultaClientes()
         {
             InitializeComponent();
+        }
+
+        List<Clientes> lista = new List<Clientes>();
+
+        private void BotonBuscar_Click(object sender, EventArgs e)
+        {
+
+            if (!String.IsNullOrEmpty(textBoxID.Text))
+            {
+                lista = ClientesBll.GetLista(Utilidades.stringToInt(textBoxID.Text));
+            }
+            else
+            {
+                lista = ClientesBll.GetLista();
+
+            }
+            listadoConsulta.DataSource = lista;
+        }
+
+        private void ImprimirReporteBoton_Click(object sender, EventArgs e)
+        {
+            ReporteClientes rc = new ReporteClientes();
+            rc.Show();
         }
     }
 }

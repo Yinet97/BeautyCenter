@@ -77,6 +77,7 @@
             this.botonConsultar.TabIndex = 6;
             this.botonConsultar.Text = "consultar";
             this.botonConsultar.UseVisualStyleBackColor = false;
+            this.botonConsultar.Click += new System.EventHandler(this.botonConsultar_Click);
             // 
             // listadoConsulta
             // 
