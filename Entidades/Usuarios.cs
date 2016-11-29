@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Entidades
 {
-    class Usuarios
+    public class Usuarios
     {
         [Key]
 
