@@ -80,6 +80,7 @@
             this.ActualizarBoton.TabIndex = 46;
             this.ActualizarBoton.Text = "Actualizar";
             this.ActualizarBoton.UseVisualStyleBackColor = false;
+            this.ActualizarBoton.Click += new System.EventHandler(this.ActualizarBoton_Click_1);
             // 
             // ListaCitaDataGridView
             // 
@@ -122,6 +123,7 @@
             this.BuscarClienteBoton.Size = new System.Drawing.Size(60, 37);
             this.BuscarClienteBoton.TabIndex = 4;
             this.BuscarClienteBoton.UseVisualStyleBackColor = false;
+            this.BuscarClienteBoton.Click += new System.EventHandler(this.BuscarClienteBoton_Click_1);
             // 
             // IdClienteTextBox
             // 
@@ -194,6 +196,7 @@
             this.BuscarCitaBoton.Size = new System.Drawing.Size(57, 36);
             this.BuscarCitaBoton.TabIndex = 10;
             this.BuscarCitaBoton.UseVisualStyleBackColor = false;
+            this.BuscarCitaBoton.Click += new System.EventHandler(this.BuscarCitaBoton_Click_1);
             // 
             // label1
             // 
@@ -217,7 +220,7 @@
             this.CitaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.CitaDateTimePicker.Location = new System.Drawing.Point(120, 80);
             this.CitaDateTimePicker.Name = "CitaDateTimePicker";
-            this.CitaDateTimePicker.Size = new System.Drawing.Size(207, 27);
+            this.CitaDateTimePicker.Size = new System.Drawing.Size(234, 27);
             this.CitaDateTimePicker.TabIndex = 3;
             // 
             // IdCitaTextBox
@@ -291,6 +294,7 @@
             this.GuardarBoton.Text = "Guardar";
             this.GuardarBoton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.GuardarBoton.UseVisualStyleBackColor = false;
+            this.GuardarBoton.Click += new System.EventHandler(this.GuardarBoton_Click_1);
             // 
             // NuevoBoton
             // 
@@ -306,6 +310,7 @@
             this.NuevoBoton.Text = "Nuevo";
             this.NuevoBoton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.NuevoBoton.UseVisualStyleBackColor = false;
+            this.NuevoBoton.Click += new System.EventHandler(this.NuevoBoton_Click_1);
             // 
             // EliminarBoton
             // 
@@ -321,6 +326,7 @@
             this.EliminarBoton.Text = "Eliminar";
             this.EliminarBoton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.EliminarBoton.UseVisualStyleBackColor = false;
+            this.EliminarBoton.Click += new System.EventHandler(this.EliminarBoton_Click_1);
             // 
             // RegistroCitas
             // 

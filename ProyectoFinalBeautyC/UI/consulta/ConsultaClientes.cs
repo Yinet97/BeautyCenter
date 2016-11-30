@@ -37,7 +37,7 @@ namespace ProyectoFinalBeautyC.UI.Consultas
 
         private void ImprimirReporteBoton_Click(object sender, EventArgs e)
         {
-            ReporteClientes rc = new ReporteClientes();
+            UI.Reportes.ReporteClientes rc = new UI.Reportes.ReporteClientes();
             rc.Show();
         }
     }

@@ -18,7 +18,58 @@ namespace ProyectoFinalBeautyC.Registros
             InitializeComponent();
         }
 
-        private void GuardarBoton_Click(object sender, EventArgs e)
+        public void BuscarID()
+        {
+            var ser = ServiciosBll.Buscar(Convert.ToInt32(IDtextBox.Text));
+            if (ser != null)
+            {
+                TipoTextBox.Text = ser.TipoServicio;
+                CostoTextBox.Text = ser.Costo.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Este Servicio no Existe");
+            }
+        }
+        
+
+        public void LimpiarCampos()
+        {
+            IDtextBox.Clear();
+            TipoTextBox.Clear();
+            CostoTextBox.Clear();
+        }
+
+        private void RegistroServicios_Load(object sender, EventArgs e)
+        {
+            MaximizeBox = false;
+            MinimizeBox = false;
+        }
+
+        private void BuscarBoton_Click_1(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(IDtextBox.Text);
+
+            if (string.IsNullOrEmpty(IDtextBox.Text))
+            {
+                MessageBox.Show("Tienes el campo vacio");
+            }
+            else
+            {
+                BuscarID();
+            }
+        }
+
+        private void EliminarBoton_Click_1(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(IDtextBox.Text);
+
+            ServiciosBll.Eliminar(id);
+            MessageBox.Show("Eliminado !");
+            LimpiarCampos();
+        }
+
+        private void GuardarBoton_Click_1(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(TipoTextBox.Text) || string.IsNullOrEmpty(CostoTextBox.Text))
             {
@@ -43,60 +94,9 @@ namespace ProyectoFinalBeautyC.Registros
             }
         }
 
-        private void EliminarBoton_Click(object sender, EventArgs e)
-        {
-            int id = Convert.ToInt32(IDtextBox.Text);
-
-            ServiciosBll.Eliminar(id);
-            MessageBox.Show("Eliminado !");
-            LimpiarCampos();
-        }
-
-        private void BuscarBoton_Click(object sender, EventArgs e)
-        {
-
-            int id = Convert.ToInt32(IDtextBox.Text);
-
-            if (string.IsNullOrEmpty(IDtextBox.Text))
-            {
-                MessageBox.Show("Tienes el campo vacio");
-            }
-            else
-            {
-                BuscarID();
-            }
-        }
-
-        public void BuscarID()
-        {
-            var ser = ServiciosBll.Buscar(Convert.ToInt32(IDtextBox.Text));
-            if (ser != null)
-            {
-                TipoTextBox.Text = ser.TipoServicio;
-                CostoTextBox.Text = ser.Costo.ToString();
-            }
-            else
-            {
-                MessageBox.Show("Este Servicio no Existe");
-            }
-        }
-
-        private void NuevoBoton_Click(object sender, EventArgs e)
+        private void NuevoBoton_Click_1(object sender, EventArgs e)
         {
             LimpiarCampos();
-        }
-
-        public void LimpiarCampos()
-        {
-            IDtextBox.Clear();
-            TipoTextBox.Clear();
-            CostoTextBox.Clear();
-        }
-
-        private void RegistroServicios_Load(object sender, EventArgs e)
-        {
-            MaximizeBox = false;
-            MinimizeBox = false;
         }
     }
 }

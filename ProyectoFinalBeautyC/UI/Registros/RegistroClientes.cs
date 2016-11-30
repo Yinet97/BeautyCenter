@@ -18,9 +18,55 @@ namespace ProyectoFinalBeautyC.Registros
             InitializeComponent();
         }
 
-        private void GuardarBoton_Click(object sender, EventArgs e)
+        public void BuscarID()
         {
+            var client = ClientesBll.Buscar(Convert.ToInt32(IDtextBox.Text));
+            if (client != null)
+            {
+                NombretextBox.Text = client.Nombre;
+                CedulaTextBox.Text = client.Cedula;
+                DireccionTextBox.Text = client.Direccion;
+                TelefonoTextBox.Text = client.Telefono;
+            }
+            else
+            {
+                MessageBox.Show("Este Cliente no Existe");
+            }
 
+        }
+        
+
+        public void LimpiarCampos()
+        {
+            NombretextBox.Clear();
+            DireccionTextBox.Clear();
+            CedulaTextBox.Clear();
+            IDtextBox.Clear();
+            TelefonoTextBox.Clear();
+        }
+        
+        private void RegistroClientes_Load(object sender, EventArgs e)
+        {
+            MaximizeBox = false;
+            MinimizeBox = false;
+        }
+
+        private void BuscarBoton_Click_1(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(IDtextBox.Text);
+
+            if (string.IsNullOrEmpty(IDtextBox.Text))
+            {
+                MessageBox.Show("Tienes el campo vacio");
+            }
+            else
+            {
+                BuscarID();
+            }
+        }
+
+        private void GuardarBoton_Click_1(object sender, EventArgs e)
+        {
             if (string.IsNullOrEmpty(NombretextBox.Text) || string.IsNullOrEmpty(CedulaTextBox.Text) || string.IsNullOrEmpty(TelefonoTextBox.Text))
             {
                 MessageBox.Show("Dejaste un campo vacio");
@@ -46,38 +92,7 @@ namespace ProyectoFinalBeautyC.Registros
             }
         }
 
-        private void BuscarBoton_Click(object sender, EventArgs e)
-        {
-            int id = Convert.ToInt32(IDtextBox.Text);
-
-            if (string.IsNullOrEmpty(IDtextBox.Text))
-            {
-                MessageBox.Show("Tienes el campo vacio");
-            }
-            else
-            {
-                BuscarID();
-            }
-        }
-
-        public void BuscarID()
-        {
-            var client = ClientesBll.Buscar(Convert.ToInt32(IDtextBox.Text));
-            if (client != null)
-            {
-                NombretextBox.Text = client.Nombre;
-                CedulaTextBox.Text = client.Cedula;
-                DireccionTextBox.Text = client.Direccion;
-                TelefonoTextBox.Text = client.Telefono;
-            }
-            else
-            {
-                MessageBox.Show("Este Cliente no Existe");
-            }
-
-        }
-
-        private void EliminarBoton_Click(object sender, EventArgs e)
+        private void EliminarBoton_Click_1(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(IDtextBox.Text);
 
@@ -86,24 +101,9 @@ namespace ProyectoFinalBeautyC.Registros
             LimpiarCampos();
         }
 
-        public void LimpiarCampos()
-        {
-            NombretextBox.Clear();
-            DireccionTextBox.Clear();
-            CedulaTextBox.Clear();
-            IDtextBox.Clear();
-            TelefonoTextBox.Clear();
-        }
-
-        private void NuevoBoton_Click(object sender, EventArgs e)
+        private void NuevoBoton_Click_1(object sender, EventArgs e)
         {
             LimpiarCampos();
-        }
-
-        private void RegistroClientes_Load(object sender, EventArgs e)
-        {
-            MaximizeBox = false;
-            MinimizeBox = false;
         }
     }
 }

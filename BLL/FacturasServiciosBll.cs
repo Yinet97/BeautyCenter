@@ -41,7 +41,7 @@ namespace BLL
 
             try
             {
-                using (BeautyBaseDb db = new BeautyBaseDb())
+                using (BeautyCenterDb db = new BeautyCenterDb())
                 {
                     FacturasServicios user = (from c in db.FacturaServicios where c.Id == id select c).FirstOrDefault();
                     db.FacturaServicios.Remove(user);

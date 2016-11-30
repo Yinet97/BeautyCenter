@@ -37,12 +37,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.Boton_Buscar = new System.Windows.Forms.Button();
+            this.BotonBuscar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.Boton_Eliminar = new System.Windows.Forms.Button();
-            this.Boton_Nuevo = new System.Windows.Forms.Button();
-            this.Boton_Guardar = new System.Windows.Forms.Button();
+            this.BotonEliminar = new System.Windows.Forms.Button();
+            this.BotonNuevo = new System.Windows.Forms.Button();
+            this.BotonGuardar = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -134,22 +134,23 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.Boton_Buscar);
+            this.panel4.Controls.Add(this.BotonBuscar);
             this.panel4.Location = new System.Drawing.Point(106, 65);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(480, 225);
             this.panel4.TabIndex = 59;
             // 
-            // Boton_Buscar
+            // BotonBuscar
             // 
-            this.Boton_Buscar.BackColor = System.Drawing.Color.Transparent;
-            this.Boton_Buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Boton_Buscar.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Boton_Buscar.Location = new System.Drawing.Point(293, 26);
-            this.Boton_Buscar.Name = "Boton_Buscar";
-            this.Boton_Buscar.Size = new System.Drawing.Size(52, 39);
-            this.Boton_Buscar.TabIndex = 5;
-            this.Boton_Buscar.UseVisualStyleBackColor = false;
+            this.BotonBuscar.BackColor = System.Drawing.Color.Transparent;
+            this.BotonBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonBuscar.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotonBuscar.Location = new System.Drawing.Point(293, 26);
+            this.BotonBuscar.Name = "BotonBuscar";
+            this.BotonBuscar.Size = new System.Drawing.Size(52, 39);
+            this.BotonBuscar.TabIndex = 5;
+            this.BotonBuscar.UseVisualStyleBackColor = false;
+            this.BotonBuscar.Click += new System.EventHandler(this.BotonBuscar_Click);
             // 
             // panel1
             // 
@@ -162,56 +163,58 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkMagenta;
-            this.panel2.Controls.Add(this.Boton_Eliminar);
-            this.panel2.Controls.Add(this.Boton_Nuevo);
-            this.panel2.Controls.Add(this.Boton_Guardar);
+            this.panel2.Controls.Add(this.BotonEliminar);
+            this.panel2.Controls.Add(this.BotonNuevo);
+            this.panel2.Controls.Add(this.BotonGuardar);
             this.panel2.Location = new System.Drawing.Point(4, 165);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(690, 228);
             this.panel2.TabIndex = 61;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // Boton_Eliminar
+            // BotonEliminar
             // 
-            this.Boton_Eliminar.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.Boton_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Boton_Eliminar.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Boton_Eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Boton_Eliminar.Location = new System.Drawing.Point(519, 153);
-            this.Boton_Eliminar.Name = "Boton_Eliminar";
-            this.Boton_Eliminar.Size = new System.Drawing.Size(131, 52);
-            this.Boton_Eliminar.TabIndex = 10;
-            this.Boton_Eliminar.Text = "Eliminar";
-            this.Boton_Eliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Boton_Eliminar.UseVisualStyleBackColor = false;
+            this.BotonEliminar.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.BotonEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonEliminar.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotonEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BotonEliminar.Location = new System.Drawing.Point(519, 153);
+            this.BotonEliminar.Name = "BotonEliminar";
+            this.BotonEliminar.Size = new System.Drawing.Size(131, 52);
+            this.BotonEliminar.TabIndex = 10;
+            this.BotonEliminar.Text = "Eliminar";
+            this.BotonEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BotonEliminar.UseVisualStyleBackColor = false;
+            this.BotonEliminar.Click += new System.EventHandler(this.BotonEliminar_Click);
             // 
-            // Boton_Nuevo
+            // BotonNuevo
             // 
-            this.Boton_Nuevo.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.Boton_Nuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Boton_Nuevo.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Boton_Nuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Boton_Nuevo.Location = new System.Drawing.Point(52, 153);
-            this.Boton_Nuevo.Name = "Boton_Nuevo";
-            this.Boton_Nuevo.Size = new System.Drawing.Size(124, 52);
-            this.Boton_Nuevo.TabIndex = 8;
-            this.Boton_Nuevo.Text = "Nuevo";
-            this.Boton_Nuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Boton_Nuevo.UseVisualStyleBackColor = false;
+            this.BotonNuevo.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.BotonNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonNuevo.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotonNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BotonNuevo.Location = new System.Drawing.Point(52, 153);
+            this.BotonNuevo.Name = "BotonNuevo";
+            this.BotonNuevo.Size = new System.Drawing.Size(124, 52);
+            this.BotonNuevo.TabIndex = 8;
+            this.BotonNuevo.Text = "Nuevo";
+            this.BotonNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BotonNuevo.UseVisualStyleBackColor = false;
+            this.BotonNuevo.Click += new System.EventHandler(this.BotonNuevo_Click);
             // 
-            // Boton_Guardar
+            // BotonGuardar
             // 
-            this.Boton_Guardar.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.Boton_Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Boton_Guardar.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Boton_Guardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Boton_Guardar.Location = new System.Drawing.Point(270, 153);
-            this.Boton_Guardar.Name = "Boton_Guardar";
-            this.Boton_Guardar.Size = new System.Drawing.Size(139, 52);
-            this.Boton_Guardar.TabIndex = 9;
-            this.Boton_Guardar.Text = "Guardar";
-            this.Boton_Guardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Boton_Guardar.UseVisualStyleBackColor = false;
+            this.BotonGuardar.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.BotonGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonGuardar.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotonGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BotonGuardar.Location = new System.Drawing.Point(270, 153);
+            this.BotonGuardar.Name = "BotonGuardar";
+            this.BotonGuardar.Size = new System.Drawing.Size(139, 52);
+            this.BotonGuardar.TabIndex = 9;
+            this.BotonGuardar.Text = "Guardar";
+            this.BotonGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BotonGuardar.UseVisualStyleBackColor = false;
+            this.BotonGuardar.Click += new System.EventHandler(this.BotonGuardar_Click);
             // 
             // RegistroTiposUsuarios
             // 
@@ -231,6 +234,7 @@
             this.Controls.Add(this.panel2);
             this.Name = "RegistroTiposUsuarios";
             this.Text = "Registro Tipos Usuarios";
+            this.Load += new System.EventHandler(this.RegistroTiposUsuarios_Load_1);
             this.panel4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -249,11 +253,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button Boton_Buscar;
+        private System.Windows.Forms.Button BotonBuscar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button Boton_Eliminar;
-        private System.Windows.Forms.Button Boton_Nuevo;
-        private System.Windows.Forms.Button Boton_Guardar;
+        private System.Windows.Forms.Button BotonEliminar;
+        private System.Windows.Forms.Button BotonNuevo;
+        private System.Windows.Forms.Button BotonGuardar;
     }
 }

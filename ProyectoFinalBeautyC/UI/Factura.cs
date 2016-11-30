@@ -62,7 +62,7 @@ namespace ProyectoFinalBeautyC
         public void Calcular()
         {
             Decimal suma = 0.00m;
-            BeautyBaseDb db = new BeautyBaseDb();
+            BeautyCenterDb db = new BeautyCenterDb();
 
             var costos = from ser in db.Servicio
                          select ser.Costo;

@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.botonRegistrar = new System.Windows.Forms.Button();
+            this.botonEntrar = new System.Windows.Forms.Button();
             this.claveTexBox = new System.Windows.Forms.TextBox();
             this.usuarioTexBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.botonEntrar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -55,6 +55,16 @@
             this.panel1.Size = new System.Drawing.Size(478, 351);
             this.panel1.TabIndex = 2;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProyectoFinalBeautyC.Properties.Resources.user;
+            this.pictureBox1.Location = new System.Drawing.Point(174, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(164, 157);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
             // botonRegistrar
             // 
             this.botonRegistrar.BackColor = System.Drawing.Color.Indigo;
@@ -70,6 +80,24 @@
             this.botonRegistrar.Text = "Registar";
             this.botonRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.botonRegistrar.UseVisualStyleBackColor = false;
+            this.botonRegistrar.Click += new System.EventHandler(this.botonRegistrar_Click);
+            // 
+            // botonEntrar
+            // 
+            this.botonEntrar.BackColor = System.Drawing.Color.Thistle;
+            this.botonEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonEntrar.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonEntrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.botonEntrar.Image = global::ProyectoFinalBeautyC.Properties.Resources.login;
+            this.botonEntrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.botonEntrar.Location = new System.Drawing.Point(237, 292);
+            this.botonEntrar.Name = "botonEntrar";
+            this.botonEntrar.Size = new System.Drawing.Size(101, 45);
+            this.botonEntrar.TabIndex = 4;
+            this.botonEntrar.Text = "Entrar";
+            this.botonEntrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.botonEntrar.UseVisualStyleBackColor = false;
+            this.botonEntrar.Click += new System.EventHandler(this.botonEntrar_Click_1);
             // 
             // claveTexBox
             // 
@@ -111,32 +139,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Usuario";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ProyectoFinalBeautyC.Properties.Resources.user;
-            this.pictureBox1.Location = new System.Drawing.Point(174, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(164, 157);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
-            // botonEntrar
-            // 
-            this.botonEntrar.BackColor = System.Drawing.Color.Thistle;
-            this.botonEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonEntrar.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonEntrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.botonEntrar.Image = global::ProyectoFinalBeautyC.Properties.Resources.login;
-            this.botonEntrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botonEntrar.Location = new System.Drawing.Point(237, 292);
-            this.botonEntrar.Name = "botonEntrar";
-            this.botonEntrar.Size = new System.Drawing.Size(101, 45);
-            this.botonEntrar.TabIndex = 4;
-            this.botonEntrar.Text = "Entrar";
-            this.botonEntrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.botonEntrar.UseVisualStyleBackColor = false;
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -146,6 +148,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Login";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load_1);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

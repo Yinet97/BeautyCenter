@@ -18,49 +18,7 @@ namespace ProyectoFinalBeautyC.Registros
         {
             InitializeComponent();
         }
-
-        private void Boton_Guardar_Click(object sender, EventArgs e)
-        {
-            string type = TiposComboBox.SelectedValue.ToString();
-
-            if (string.IsNullOrEmpty(NombreTextBox.Text) || string.IsNullOrEmpty(ClaveTextBox.Text))
-            {
-                MessageBox.Show("Dejaste un campo vacio");
-
-            }
-            else
-            {
-                Usuarios user = new Usuarios();
-
-                int id;
-                int.TryParse(IdTextBox.Text, out id);
-                user.Clave = ClaveTextBox.Text;
-                user.Nombre = NombreTextBox.Text;
-                user.Tipo = type;
-                user.UsuarioId = id;
-
-                if (UsuariosBll.Insertar(user))
-                {
-                    MessageBox.Show("Guardado !!");
-                }
-                LimpiarCampos();
-
-            }
-        }
-
-        private void Boton_Eliminar_Click(object sender, EventArgs e)
-        {
-            int id = Convert.ToInt32(IdTextBox.Text);
-
-            UsuariosBll.Eliminar(id);
-            MessageBox.Show("Eliminado !");
-            LimpiarCampos();
-        }
-
-        private void Boton_Nuevo_Click(object sender, EventArgs e)
-        {
-            LimpiarCampos();
-        }
+        
 
         public void LimpiarCampos()
         {
@@ -68,21 +26,7 @@ namespace ProyectoFinalBeautyC.Registros
             ClaveTextBox.Clear();
             IdTextBox.Clear();
         }
-
-        private void Boton_Buscar_Click_1(object sender, EventArgs e)
-        {
-
-            int id = Convert.ToInt32(IdTextBox.Text);
-
-            if (string.IsNullOrEmpty(IdTextBox.Text))
-            {
-                MessageBox.Show("Tienes el campo vacio");
-            }
-            else
-            {
-                BuscarID();
-            }
-        }
+        
 
         public void BuscarID()
         {
@@ -111,8 +55,66 @@ namespace ProyectoFinalBeautyC.Registros
 
             }
         }
+        
 
-        private void RegistroTiposUsuarios_Load(object sender, EventArgs e)
+        private void BotonGuardar_Click(object sender, EventArgs e)
+        {
+          //  string type = TiposComboBox.SelectedValue.ToString();
+
+            if (string.IsNullOrEmpty(NombreTextBox.Text) || string.IsNullOrEmpty(ClaveTextBox.Text))
+            {
+                MessageBox.Show("Dejaste un campo vacio");
+
+            }
+            else
+            {
+                Usuarios user = new Usuarios();
+
+                int id;
+                int.TryParse(IdTextBox.Text, out id);
+                user.Clave = ClaveTextBox.Text;
+                user.Nombre = NombreTextBox.Text;
+              //  user.Tipo = type;
+                user.UsuarioId = id;
+
+                if (UsuariosBll.Insertar(user))
+                {
+                    MessageBox.Show("Guardado !!");
+                }
+                LimpiarCampos();
+
+            }
+        }
+
+        private void BotonEliminar_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(IdTextBox.Text);
+
+            UsuariosBll.Eliminar(id);
+            MessageBox.Show("Eliminado !");
+            LimpiarCampos();
+        }
+
+        private void BotonNuevo_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
+        }
+
+        private void BotonBuscar_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(IdTextBox.Text);
+
+            if (string.IsNullOrEmpty(IdTextBox.Text))
+            {
+                MessageBox.Show("Tienes el campo vacio");
+            }
+            else
+            {
+                BuscarID();
+            }
+        }
+
+        private void RegistroTiposUsuarios_Load_1(object sender, EventArgs e)
         {
             MaximizeBox = false;
             MinimizeBox = false;

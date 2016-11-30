@@ -4475,7 +4475,7 @@ namespace ProyectoFinalBeautyC.BeautyCenterDbDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ProyectoFinalBeautyC.Properties.Settings.Default.BeautyCenterDbConnectionString;
+          //  this._connection.ConnectionString = global::ProyectoFinalBeautyC.Properties.Settings.Default.BeautyCenterDbConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4717,7 +4717,7 @@ namespace ProyectoFinalBeautyC.BeautyCenterDbDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ProyectoFinalBeautyC.Properties.Settings.Default.BeautyCenterDbConnectionString;
+           // this._connection.ConnectionString = global::ProyectoFinalBeautyC.Properties.Settings.Default.BeautyCenterDbConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4978,7 +4978,7 @@ namespace ProyectoFinalBeautyC.BeautyCenterDbDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ProyectoFinalBeautyC.Properties.Settings.Default.BeautyCenterDbConnectionString;
+         //   this._connection.ConnectionString = global::ProyectoFinalBeautyC.Properties.Settings.Default.BeautyCenterDbConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5262,7 +5262,7 @@ namespace ProyectoFinalBeautyC.BeautyCenterDbDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ProyectoFinalBeautyC.Properties.Settings.Default.BeautyCenterDbConnectionString;
+          //  this._connection.ConnectionString = global::ProyectoFinalBeautyC.Properties.Settings.Default.BeautyCenterDbConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5549,7 +5549,7 @@ namespace ProyectoFinalBeautyC.BeautyCenterDbDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ProyectoFinalBeautyC.Properties.Settings.Default.BeautyCenterDbConnectionString;
+         //   this._connection.ConnectionString = global::ProyectoFinalBeautyC.Properties.Settings.Default.BeautyCenterDbConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5787,7 +5787,7 @@ namespace ProyectoFinalBeautyC.BeautyCenterDbDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ProyectoFinalBeautyC.Properties.Settings.Default.BeautyCenterDbConnectionString;
+         //   this._connection.ConnectionString = global::ProyectoFinalBeautyC.Properties.Settings.Default.BeautyCenterDbConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6022,7 +6022,7 @@ namespace ProyectoFinalBeautyC.BeautyCenterDbDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ProyectoFinalBeautyC.Properties.Settings.Default.BeautyCenterDbConnectionString;
+        //    this._connection.ConnectionString = global::ProyectoFinalBeautyC.Properties.Settings.Default.BeautyCenterDbConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6256,7 +6256,7 @@ namespace ProyectoFinalBeautyC.BeautyCenterDbDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ProyectoFinalBeautyC.Properties.Settings.Default.BeautyCenterDbConnectionString;
+           // this._connection.ConnectionString = global::ProyectoFinalBeautyC.Properties.Settings.Default.BeautyCenterDbConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

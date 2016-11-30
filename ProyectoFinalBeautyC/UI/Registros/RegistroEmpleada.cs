@@ -19,63 +19,6 @@ namespace ProyectoFinalBeautyC.Registros
             InitializeComponent();
         }
 
-        private void GuardarBoton_Click(object sender, EventArgs e)
-        {
-
-            if (string.IsNullOrEmpty(NombreTextBox.Text) || string.IsNullOrEmpty(CedulaTextBox.Text) || string.IsNullOrEmpty(ServicioTextBox.Text))
-            {
-                MessageBox.Show("Dejaste un campo vacio");
-
-            }
-            else
-            {
-                Empleadas user = new Empleadas();
-
-                using (BeautyCenterDb db = new BeautyCenterDb())
-                {
-                    string var = (from c in db.Servicio where c.TipoServicio == ServicioTextBox.Text select c.TipoServicio).FirstOrDefault();
-                    if (var == ServicioTextBox.Text)
-                    {
-                        int id;
-                        int.TryParse(IdTextBox.Text, out id);
-                        user.Nombre = NombreTextBox.Text;
-                        user.Cedula = CedulaTextBox.Text;
-                        user.Telefono = TelefonoTextBox.Text;
-                        user.Direccion = DireccionTextBox.Text;
-                        user.Servicio = ServicioTextBox.Text;
-                        user.SueldoFijo = Convert.ToInt32(SueldoFijoTextBox.Text);
-                        user.FechaEntrada = FechaDateTimePicker.Value.Date;
-                        user.EmpleadaId = id;
-
-                        if (EmpleadasBll.Insertar(user))
-                        {
-                            MessageBox.Show("Empleado Guardada Exitosamente");
-
-                        }
-                        LimpiarCampos();
-                    }
-                    else
-                    {
-                        MessageBox.Show("El Servicio no esta registrado");
-                    }
-                }
-            }
-        }
-
-        private void EliminarBoton_Click(object sender, EventArgs e)
-        {
-            int id = Convert.ToInt32(IdTextBox.Text);
-
-            EmpleadasBll.Eliminar(id);
-            MessageBox.Show("Eliminado !");
-            LimpiarCampos();
-        }
-
-        private void NuevoBoton_Click(object sender, EventArgs e)
-        {
-            LimpiarCampos();
-        }
-
         public void LimpiarCampos()
         {
             IdTextBox.Clear();
@@ -86,21 +29,6 @@ namespace ProyectoFinalBeautyC.Registros
             SueldoFijoTextBox.Clear();
             ServicioTextBox.Clear();
             TelefonoTextBox.Clear();
-        }
-
-        private void BuscarBoton_Click(object sender, EventArgs e)
-        {
-
-
-            if (string.IsNullOrEmpty(IdTextBox.Text))
-            {
-                MessageBox.Show("Tienes el campo vacio");
-            }
-            else
-            {
-                int id = Convert.ToInt32(IdTextBox.Text);
-                BuscarID();
-            }
         }
 
         public void BuscarID()
@@ -150,6 +78,75 @@ namespace ProyectoFinalBeautyC.Registros
                 aColl.Add(cad);
             }
             ServicioTextBox.AutoCompleteCustomSource = aColl;
+        }
+
+        private void BuscarBoton_Click_1(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(IdTextBox.Text))
+            {
+                MessageBox.Show("Tienes el campo vacio");
+            }
+            else
+            {
+                int id = Convert.ToInt32(IdTextBox.Text);
+                BuscarID();
+            }
+        }
+
+        private void EliminarBoton_Click_1(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(IdTextBox.Text);
+
+            EmpleadasBll.Eliminar(id);
+            MessageBox.Show("Eliminado !");
+            LimpiarCampos();
+        }
+
+        private void GuardarBoton_Click_1(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(NombreTextBox.Text) || string.IsNullOrEmpty(CedulaTextBox.Text) || string.IsNullOrEmpty(ServicioTextBox.Text))
+            {
+                MessageBox.Show("Dejaste un campo vacio");
+
+            }
+            else
+            {
+                Empleadas user = new Empleadas();
+
+                using (BeautyCenterDb db = new BeautyCenterDb())
+                {
+                    string var = (from c in db.Servicio where c.TipoServicio == ServicioTextBox.Text select c.TipoServicio).FirstOrDefault();
+                    if (var == ServicioTextBox.Text)
+                    {
+                        int id;
+                        int.TryParse(IdTextBox.Text, out id);
+                        user.Nombre = NombreTextBox.Text;
+                        user.Cedula = CedulaTextBox.Text;
+                        user.Telefono = TelefonoTextBox.Text;
+                        user.Direccion = DireccionTextBox.Text;
+                        user.Servicio = ServicioTextBox.Text;
+                        user.SueldoFijo = Convert.ToInt32(SueldoFijoTextBox.Text);
+                        user.FechaEntrada = FechaDateTimePicker.Value.Date;
+                        user.EmpleadaId = id;
+
+                        if (EmpleadasBll.Insertar(user))
+                        {
+                            MessageBox.Show("Empleado Guardada Exitosamente");
+
+                        }
+                        LimpiarCampos();
+                    }
+                    else
+                    {
+                        MessageBox.Show("El Servicio no esta registrado");
+                    }
+                }
+            }
+        }
+
+        private void NuevoBoton_Click_1(object sender, EventArgs e)
+        {
+            LimpiarCampos();
         }
     }
 }

@@ -58,6 +58,7 @@
             this.EliminarBoton.Text = "Eliminar";
             this.EliminarBoton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.EliminarBoton.UseVisualStyleBackColor = false;
+            this.EliminarBoton.Click += new System.EventHandler(this.EliminarBoton_Click_1);
             // 
             // GuardarBoton
             // 
@@ -72,6 +73,7 @@
             this.GuardarBoton.Text = "Guardar";
             this.GuardarBoton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.GuardarBoton.UseVisualStyleBackColor = false;
+            this.GuardarBoton.Click += new System.EventHandler(this.GuardarBoton_Click_1);
             // 
             // NuevoBoton
             // 
@@ -86,6 +88,7 @@
             this.NuevoBoton.Text = "Nuevo";
             this.NuevoBoton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.NuevoBoton.UseVisualStyleBackColor = false;
+            this.NuevoBoton.Click += new System.EventHandler(this.NuevoBoton_Click_1);
             // 
             // panel1
             // 
@@ -112,6 +115,7 @@
             this.BuscarBoton.Size = new System.Drawing.Size(41, 41);
             this.BuscarBoton.TabIndex = 33;
             this.BuscarBoton.UseVisualStyleBackColor = false;
+            this.BuscarBoton.Click += new System.EventHandler(this.BuscarBoton_Click_1);
             // 
             // CostoTextBox
             // 

@@ -31,34 +31,17 @@ namespace ProyectoFinalBeautyC
                rtu.Show();
            }
 
-           private void regEmpleadasToolStripMenuItem_Click(object sender, EventArgs e)
-           {
-               RegistroEmpleada re = new RegistroEmpleada();
-               re.Show();
-           }
-
            private void empleadasToolStripMenuItem_Click(object sender, EventArgs e)
            {
                UI.Consultas.ConsultaEmpleadas ce = new UI.Consultas.ConsultaEmpleadas();
                ce.Show();
            }
-
-           private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
-           {
-               Registros.RegistroClientes rc = new Registros.RegistroClientes();
-               rc.Show();
-           }
+        
 
            private void clientesToolStripMenuItem1_Click(object sender, EventArgs e)
            {
                 UI.Consultas.ConsultaClientes cc = new UI.Consultas.ConsultaClientes();
                cc.Show();
-           }
-
-           private void serviciosToolStripMenuItem_Click(object sender, EventArgs e)
-           {
-               Registros.RegistroServicios rS = new Registros.RegistroServicios();
-               rS.Show();
            }
 
            private void serviciosToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -85,25 +68,10 @@ namespace ProyectoFinalBeautyC
                reporte.Show();
            }
 
-           private void Login_Load(object sender, EventArgs e)
-           {
-               if (this.WindowState == FormWindowState.Normal)
-                   this.WindowState = FormWindowState.Maximized;
-
-               MaximizeBox = false;
-               MinimizeBox = false;
-           }
-
            private void CitasBoton_Click(object sender, EventArgs e)
            {
                Registros.RegistroCitas rc = new Registros.RegistroCitas();
                rc.Show();
-           }
-
-           private void FacturarBoton_Click(object sender, EventArgs e)
-           {
-               Factura f = new Factura();
-               f.Show();
            }
 
            private void citasToolStripMenuItem_Click(object sender, EventArgs e)
@@ -141,6 +109,39 @@ namespace ProyectoFinalBeautyC
         {
             UI.Reportes.ReporteUsuarios ru = new UI.Reportes.ReporteUsuarios();
             ru.Show();
+        }
+
+        private void FacturarBoton_Click_1(object sender, EventArgs e)
+        {
+            Factura f = new Factura();
+            f.Show();
+        }
+
+        private void Programa_Load(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Normal)
+                this.WindowState = FormWindowState.Maximized;
+
+            MaximizeBox = false;
+            MinimizeBox = false;
+        }
+
+        private void regEmpleadasToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            RegistroEmpleada r = new RegistroEmpleada();
+            r.Show();
+        }
+
+        private void clientesToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+           RegistroClientes rc = new RegistroClientes();
+            rc.Show();
+        }
+
+        private void serviciosToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            RegistroServicios rS = new RegistroServicios();
+            rS.Show();
         }
     }
 }
