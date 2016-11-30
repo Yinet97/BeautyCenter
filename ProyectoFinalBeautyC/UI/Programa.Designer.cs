@@ -51,6 +51,8 @@
             this.usuariosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.facturasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -109,6 +111,7 @@
             this.CitasBoton.Text = "Citas";
             this.CitasBoton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.CitasBoton.UseVisualStyleBackColor = false;
+            this.CitasBoton.Click += new System.EventHandler(this.CitasBoton_Click);
             // 
             // menuStrip1
             // 
@@ -131,7 +134,8 @@
             this.registrarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.regEmpleadasToolStripMenuItem,
             this.clientesToolStripMenuItem,
-            this.serviciosToolStripMenuItem});
+            this.serviciosToolStripMenuItem,
+            this.usuariosToolStripMenuItem2});
             this.registrarToolStripMenuItem.Name = "registrarToolStripMenuItem";
             this.registrarToolStripMenuItem.Size = new System.Drawing.Size(77, 22);
             this.registrarToolStripMenuItem.Text = "Registrar";
@@ -210,7 +214,8 @@
             this.empleadasToolStripMenuItem1,
             this.serviciosToolStripMenuItem2,
             this.usuariosToolStripMenuItem1,
-            this.facturasToolStripMenuItem1});
+            this.facturasToolStripMenuItem1,
+            this.usuariosToolStripMenuItem3});
             this.reporteToolStripMenuItem.Name = "reporteToolStripMenuItem";
             this.reporteToolStripMenuItem.Size = new System.Drawing.Size(71, 22);
             this.reporteToolStripMenuItem.Text = "Reporte";
@@ -250,6 +255,20 @@
             this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
             this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(61, 22);
             this.ayudaToolStripMenuItem.Text = "Ayuda";
+            // 
+            // usuariosToolStripMenuItem2
+            // 
+            this.usuariosToolStripMenuItem2.Name = "usuariosToolStripMenuItem2";
+            this.usuariosToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.usuariosToolStripMenuItem2.Text = "Usuarios";
+            this.usuariosToolStripMenuItem2.Click += new System.EventHandler(this.usuariosToolStripMenuItem2_Click);
+            // 
+            // usuariosToolStripMenuItem3
+            // 
+            this.usuariosToolStripMenuItem3.Name = "usuariosToolStripMenuItem3";
+            this.usuariosToolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
+            this.usuariosToolStripMenuItem3.Text = "Usuarios";
+            this.usuariosToolStripMenuItem3.Click += new System.EventHandler(this.usuariosToolStripMenuItem3_Click);
             // 
             // Programa
             // 
@@ -297,5 +316,7 @@
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem facturasToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem3;
     }
 }
