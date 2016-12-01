@@ -199,9 +199,12 @@ namespace ProyectoFinalBeautyC
 
         private void EliminarBoton_Click_1(object sender, EventArgs e)
         {
+            var fact = new Facturas();
             int id = Convert.ToInt32(IdTextBox.Text);
 
-            CitasBll.Eliminar(id);
+            FacturasBll.Eliminar(id);
+           // ServiciosDataGridView.DataSource = null;
+           // ServiciosDataGridView.DataSource = fact.Service.Remove();
             MessageBox.Show("Eliminad !");
             Limpiar();
         }
