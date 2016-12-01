@@ -219,5 +219,11 @@ namespace ProyectoFinalBeautyC
             MaximizeBox = false;
             MinimizeBox = false;
         }
+
+        private void EliminarSeleccionBoton_Click(object sender, EventArgs e)
+        {
+            // ServiciosDataGridView.Rows.RemoveAt(ServiciosDataGridView.CurrentRow.Index);
+
+        }
     }
 }

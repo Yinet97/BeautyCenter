@@ -51,6 +51,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.EliminarSeleccionBoton = new System.Windows.Forms.Button();
             this.AgregarBoton = new System.Windows.Forms.Button();
             this.SubTotalTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -69,7 +70,7 @@
             this.ServiciosDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ServiciosDataGridView.BackgroundColor = System.Drawing.Color.White;
             this.ServiciosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ServiciosDataGridView.Location = new System.Drawing.Point(61, 383);
+            this.ServiciosDataGridView.Location = new System.Drawing.Point(42, 67);
             this.ServiciosDataGridView.Name = "ServiciosDataGridView";
             this.ServiciosDataGridView.Size = new System.Drawing.Size(822, 168);
             this.ServiciosDataGridView.TabIndex = 42;
@@ -115,7 +116,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(91, 345);
+            this.label4.Location = new System.Drawing.Point(79, 29);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 18);
             this.label4.TabIndex = 37;
@@ -295,14 +296,33 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.EliminarSeleccionBoton);
             this.groupBox1.Controls.Add(this.AgregarBoton);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.ServiciosDataGridView);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 316);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(909, 262);
+            this.groupBox1.Size = new System.Drawing.Size(909, 277);
             this.groupBox1.TabIndex = 44;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalle";
+            // 
+            // EliminarSeleccionBoton
+            // 
+            this.EliminarSeleccionBoton.BackColor = System.Drawing.Color.Teal;
+            this.EliminarSeleccionBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EliminarSeleccionBoton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EliminarSeleccionBoton.ForeColor = System.Drawing.Color.White;
+            this.EliminarSeleccionBoton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.EliminarSeleccionBoton.Location = new System.Drawing.Point(397, 241);
+            this.EliminarSeleccionBoton.Name = "EliminarSeleccionBoton";
+            this.EliminarSeleccionBoton.Size = new System.Drawing.Size(129, 30);
+            this.EliminarSeleccionBoton.TabIndex = 38;
+            this.EliminarSeleccionBoton.Text = "Eliminar Seleccion";
+            this.EliminarSeleccionBoton.UseVisualStyleBackColor = false;
+            this.EliminarSeleccionBoton.Click += new System.EventHandler(this.EliminarSeleccionBoton_Click);
             // 
             // AgregarBoton
             // 
@@ -407,6 +427,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Thistle;
             this.ClientSize = new System.Drawing.Size(965, 689);
             this.Controls.Add(this.EliminarBoton);
             this.Controls.Add(this.GuardarBoton);
@@ -415,12 +436,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TotalTextBox);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.ServiciosDataGridView);
             this.Controls.Add(this.ServiciosComboBox);
             this.Controls.Add(this.IdTextBox);
             this.Controls.Add(this.BuscarBoton);
             this.Controls.Add(this.FechaActualDateTimePicker);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
@@ -431,6 +450,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -469,5 +489,6 @@
         private System.Windows.Forms.Button EliminarBoton;
         private System.Windows.Forms.Button GuardarBoton;
         private System.Windows.Forms.Button NuevoBoton;
+        private System.Windows.Forms.Button EliminarSeleccionBoton;
     }
 }
