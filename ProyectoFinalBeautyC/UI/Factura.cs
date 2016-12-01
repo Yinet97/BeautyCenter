@@ -22,43 +22,6 @@ namespace ProyectoFinalBeautyC
             f = new Facturas();
         }
 
-        private void GuardarBoton_Click(object sender, EventArgs e)
-        {
-            BeautyCenterDb db = new BeautyCenterDb();
-
-            string var = (from c in db.Cliente where c.Nombre == NombreClienteTextBox.Text select c.Nombre).FirstOrDefault();
-
-            if (string.IsNullOrEmpty(NombreClienteTextBox.Text)
-                 || var != NombreClienteTextBox.Text || string.IsNullOrEmpty(ServiciosDataGridView.DataSource.ToString()))
-            {
-                MessageBox.Show("Dejaste campos importantes Vacios o quizas el cliente no esta registrado");
-            }
-            else
-            {
-
-                int id;
-                int.TryParse(IdTextBox.Text, out id);
-                f.Fecha = DateTime.Now;
-                f.Comentario = ComentarioRichTextBox.Text;
-                f.Descuento = Convert.ToInt32(DescuentoTextBox.Text);
-                f.DescuentoPorciento = Convert.ToDouble(PorcientoDescuentoTextBox.Text);
-                f.Impuesto = Convert.ToInt32(ImpuestoTextBox.Text);
-               // f.ServicioId = 1;
-                f.NombreCliente = NombreClienteTextBox.Text;
-                f.MontoAdicional = Convert.ToInt32(MontoAdicionalTextBox.Text);
-                f.TipoPago = TipoPagoTextBox.Text;
-                f.Total = Convert.ToDouble(TotalTextBox.Text);
-                f.SubTotal = Convert.ToDouble(SubTotalTextBox.Text);
-                f.FacturaId = id;
-
-                if (FacturasBll.Guardar(f))
-                {
-                    MessageBox.Show("Guardado");
-                }
-                Limpiar();
-            }
-        }
-
         public void Calcular()
         {
             Decimal suma = 0.00m;
@@ -120,36 +83,7 @@ namespace ProyectoFinalBeautyC
             ServiciosComboBox.DisplayMember = "TipoServicio";
             ServiciosComboBox.ValueMember = "ServicioId";
         }
-
-
-        private void BuscarBoton_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(IdTextBox.Text))
-            {
-                MessageBox.Show("Tienes el campo ID vacio");
-            }
-            else
-            {
-                var fact = FacturasBll.Buscar(Convert.ToInt32(IdTextBox.Text));
-                if (fact != null)
-                {
-                    NombreClienteTextBox.Text = fact.NombreCliente;
-                    FechaActualDateTimePicker.Text = fact.Fecha.ToString();
-                    MontoAdicionalTextBox.Text = fact.MontoAdicional.ToString();
-                    ImpuestoTextBox.Text = fact.Impuesto.ToString();
-                    DescuentoTextBox.Text = fact.Descuento.ToString();
-                    ComentarioRichTextBox.Text = fact.Comentario;
-                    ServiciosDataGridView.DataSource = null;
-                    ServiciosDataGridView.DataSource = fact.Service;
-                    TipoPagoTextBox.Text = fact.TipoPago;
-                    TotalTextBox.Text = fact.Total.ToString();
-                }
-                else
-                {
-                    MessageBox.Show("Esta Factura no Existe");
-                }
-            }
-        }
+        
 
         private void AgregarBoton_Click(object sender, EventArgs e)
         {
@@ -175,21 +109,7 @@ namespace ProyectoFinalBeautyC
             SubTotalTextBox.Text = 0.00.ToString();
             f = new Facturas();
         }
-
-        private void NuevoBoton_Click(object sender, EventArgs e)
-        {
-            Limpiar();
-        }
-
-        private void Factura_Load(object sender, EventArgs e)
-        {
-            AutoCompleteMode DataCollection = new AutoCompleteMode();
-            AutoCompletarTxt(DataCollection);
-
-            MaximizeBox = false;
-            MinimizeBox = false;
-        }
-
+        
         private void AutoCompletarTxt(AutoCompleteMode AuMode)
         {
             BeautyCenterDb db = new BeautyCenterDb();
@@ -210,13 +130,94 @@ namespace ProyectoFinalBeautyC
             NombreClienteTextBox.AutoCompleteCustomSource = aColl;
         }
 
-        private void EliminarBoton_Click(object sender, EventArgs e)
+        private void BuscarBoton_Click_1(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(IdTextBox.Text))
+            {
+                MessageBox.Show("Tienes el campo ID vacio");
+            }
+            else
+            {
+                var fact = FacturasBll.Buscar(Convert.ToInt32(IdTextBox.Text));
+                if (fact != null)
+                {
+                    NombreClienteTextBox.Text = fact.NombreCliente;
+                    FechaActualDateTimePicker.Text = fact.Fecha.ToString();
+                    MontoAdicionalTextBox.Text = fact.MontoAdicional.ToString();
+                    ImpuestoTextBox.Text = fact.Impuesto.ToString();
+                    DescuentoTextBox.Text = fact.Descuento.ToString();
+                    ComentarioRichTextBox.Text = fact.Comentario;
+                    ServiciosDataGridView.DataSource = null;
+                    ServiciosDataGridView.DataSource = fact.Service;
+                    TipoPagoTextBox.Text = fact.TipoPago;
+                    TotalTextBox.Text = fact.Total.ToString();
+                    SubTotalTextBox.Text = fact.SubTotal.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Esta Factura no Existe");
+                }
+            }
+        }
+
+        private void GuardarBoton_Click_1(object sender, EventArgs e)
+        {
+            BeautyCenterDb db = new BeautyCenterDb();
+
+            string var = (from c in db.Cliente where c.Nombre == NombreClienteTextBox.Text select c.Nombre).FirstOrDefault();
+
+            if (string.IsNullOrEmpty(NombreClienteTextBox.Text)
+                 || var != NombreClienteTextBox.Text || string.IsNullOrEmpty(ServiciosDataGridView.DataSource.ToString()))
+            {
+                MessageBox.Show("Dejaste campos importantes Vacios o quizas el cliente no esta registrado");
+            }
+            else
+            {
+
+                int id;
+                int.TryParse(IdTextBox.Text, out id);
+                f.Fecha = DateTime.Now;
+                f.Comentario = ComentarioRichTextBox.Text;
+                f.Descuento = Convert.ToInt32(DescuentoTextBox.Text);
+                f.DescuentoPorciento = Convert.ToDouble(PorcientoDescuentoTextBox.Text);
+                f.Impuesto = Convert.ToInt32(ImpuestoTextBox.Text);
+                // f.ServicioId = 1;
+                f.NombreCliente = NombreClienteTextBox.Text;
+                f.MontoAdicional = Convert.ToInt32(MontoAdicionalTextBox.Text);
+                f.TipoPago = TipoPagoTextBox.Text;
+                f.Total = Convert.ToDouble(TotalTextBox.Text);
+                f.SubTotal = Convert.ToDouble(SubTotalTextBox.Text);
+                f.FacturaId = id;
+
+                if (FacturasBll.Guardar(f))
+                {
+                    MessageBox.Show("Guardado");
+                }
+                Limpiar();
+            }
+        }
+
+        private void EliminarBoton_Click_1(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(IdTextBox.Text);
 
             CitasBll.Eliminar(id);
             MessageBox.Show("Eliminad !");
             Limpiar();
+        }
+
+        private void NuevoBoton_Click_1(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+
+        private void Factura_Load_1(object sender, EventArgs e)
+        {
+            AutoCompleteMode DataCollection = new AutoCompleteMode();
+            AutoCompletarTxt(DataCollection);
+
+            MaximizeBox = false;
+            MinimizeBox = false;
         }
     }
 }
