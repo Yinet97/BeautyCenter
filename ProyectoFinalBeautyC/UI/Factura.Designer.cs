@@ -31,7 +31,6 @@
             this.ServiciosDataGridView = new System.Windows.Forms.DataGridView();
             this.ServiciosComboBox = new System.Windows.Forms.ComboBox();
             this.IdTextBox = new System.Windows.Forms.TextBox();
-            this.BuscarBoton = new System.Windows.Forms.Button();
             this.FechaActualDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,7 +51,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.EliminarSeleccionBoton = new System.Windows.Forms.Button();
-            this.AgregarBoton = new System.Windows.Forms.Button();
             this.SubTotalTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.TotalTextBox = new System.Windows.Forms.TextBox();
@@ -60,6 +58,8 @@
             this.EliminarBoton = new System.Windows.Forms.Button();
             this.GuardarBoton = new System.Windows.Forms.Button();
             this.NuevoBoton = new System.Windows.Forms.Button();
+            this.BuscarBoton = new System.Windows.Forms.Button();
+            this.AgregarBoton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ServiciosDataGridView)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -91,16 +91,6 @@
             this.IdTextBox.Name = "IdTextBox";
             this.IdTextBox.Size = new System.Drawing.Size(49, 26);
             this.IdTextBox.TabIndex = 40;
-            // 
-            // BuscarBoton
-            // 
-            this.BuscarBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BuscarBoton.Location = new System.Drawing.Point(106, 11);
-            this.BuscarBoton.Name = "BuscarBoton";
-            this.BuscarBoton.Size = new System.Drawing.Size(57, 34);
-            this.BuscarBoton.TabIndex = 39;
-            this.BuscarBoton.UseVisualStyleBackColor = true;
-            this.BuscarBoton.Click += new System.EventHandler(this.BuscarBoton_Click_1);
             // 
             // FechaActualDateTimePicker
             // 
@@ -324,20 +314,6 @@
             this.EliminarSeleccionBoton.UseVisualStyleBackColor = false;
             this.EliminarSeleccionBoton.Click += new System.EventHandler(this.EliminarSeleccionBoton_Click);
             // 
-            // AgregarBoton
-            // 
-            this.AgregarBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AgregarBoton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AgregarBoton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AgregarBoton.Location = new System.Drawing.Point(497, 18);
-            this.AgregarBoton.Name = "AgregarBoton";
-            this.AgregarBoton.Size = new System.Drawing.Size(107, 43);
-            this.AgregarBoton.TabIndex = 28;
-            this.AgregarBoton.Text = "Agregar";
-            this.AgregarBoton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.AgregarBoton.UseVisualStyleBackColor = true;
-            this.AgregarBoton.Click += new System.EventHandler(this.AgregarBoton_Click);
-            // 
             // SubTotalTextBox
             // 
             this.SubTotalTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -382,30 +358,34 @@
             // 
             // EliminarBoton
             // 
+            this.EliminarBoton.BackColor = System.Drawing.Color.White;
             this.EliminarBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EliminarBoton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EliminarBoton.Image = global::ProyectoFinalBeautyC.Properties.Resources.delete;
             this.EliminarBoton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.EliminarBoton.Location = new System.Drawing.Point(576, 604);
+            this.EliminarBoton.Location = new System.Drawing.Point(516, 615);
             this.EliminarBoton.Name = "EliminarBoton";
             this.EliminarBoton.Size = new System.Drawing.Size(132, 51);
             this.EliminarBoton.TabIndex = 51;
             this.EliminarBoton.Text = "Eliminar";
             this.EliminarBoton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.EliminarBoton.UseVisualStyleBackColor = true;
+            this.EliminarBoton.UseVisualStyleBackColor = false;
             this.EliminarBoton.Click += new System.EventHandler(this.EliminarBoton_Click_1);
             // 
             // GuardarBoton
             // 
+            this.GuardarBoton.BackColor = System.Drawing.Color.White;
             this.GuardarBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GuardarBoton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GuardarBoton.Image = global::ProyectoFinalBeautyC.Properties.Resources.save;
             this.GuardarBoton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.GuardarBoton.Location = new System.Drawing.Point(358, 604);
+            this.GuardarBoton.Location = new System.Drawing.Point(298, 615);
             this.GuardarBoton.Name = "GuardarBoton";
             this.GuardarBoton.Size = new System.Drawing.Size(129, 51);
             this.GuardarBoton.TabIndex = 50;
             this.GuardarBoton.Text = "Guardar";
             this.GuardarBoton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.GuardarBoton.UseVisualStyleBackColor = true;
+            this.GuardarBoton.UseVisualStyleBackColor = false;
             this.GuardarBoton.Click += new System.EventHandler(this.GuardarBoton_Click_1);
             // 
             // NuevoBoton
@@ -413,8 +393,9 @@
             this.NuevoBoton.BackColor = System.Drawing.Color.GhostWhite;
             this.NuevoBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NuevoBoton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NuevoBoton.Image = global::ProyectoFinalBeautyC.Properties.Resources.add;
             this.NuevoBoton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.NuevoBoton.Location = new System.Drawing.Point(106, 604);
+            this.NuevoBoton.Location = new System.Drawing.Point(46, 615);
             this.NuevoBoton.Name = "NuevoBoton";
             this.NuevoBoton.Size = new System.Drawing.Size(108, 51);
             this.NuevoBoton.TabIndex = 49;
@@ -422,6 +403,33 @@
             this.NuevoBoton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.NuevoBoton.UseVisualStyleBackColor = false;
             this.NuevoBoton.Click += new System.EventHandler(this.NuevoBoton_Click_1);
+            // 
+            // BuscarBoton
+            // 
+            this.BuscarBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BuscarBoton.Image = global::ProyectoFinalBeautyC.Properties.Resources.magnifier;
+            this.BuscarBoton.Location = new System.Drawing.Point(94, 12);
+            this.BuscarBoton.Name = "BuscarBoton";
+            this.BuscarBoton.Size = new System.Drawing.Size(48, 34);
+            this.BuscarBoton.TabIndex = 39;
+            this.BuscarBoton.UseVisualStyleBackColor = true;
+            this.BuscarBoton.Click += new System.EventHandler(this.BuscarBoton_Click_1);
+            // 
+            // AgregarBoton
+            // 
+            this.AgregarBoton.BackColor = System.Drawing.Color.Khaki;
+            this.AgregarBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AgregarBoton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AgregarBoton.Image = global::ProyectoFinalBeautyC.Properties.Resources.rounded_add_button;
+            this.AgregarBoton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AgregarBoton.Location = new System.Drawing.Point(497, 18);
+            this.AgregarBoton.Name = "AgregarBoton";
+            this.AgregarBoton.Size = new System.Drawing.Size(107, 43);
+            this.AgregarBoton.TabIndex = 28;
+            this.AgregarBoton.Text = "Agregar";
+            this.AgregarBoton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.AgregarBoton.UseVisualStyleBackColor = false;
+            this.AgregarBoton.Click += new System.EventHandler(this.AgregarBoton_Click);
             // 
             // Factura
             // 

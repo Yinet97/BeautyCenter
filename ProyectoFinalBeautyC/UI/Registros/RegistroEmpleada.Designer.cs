@@ -30,7 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BuscarBoton = new System.Windows.Forms.Button();
             this.FechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
@@ -54,9 +53,10 @@
             this.GuardarBoton = new System.Windows.Forms.Button();
             this.EliminarBoton = new System.Windows.Forms.Button();
             this.NuevoBoton = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -97,23 +97,15 @@
             this.label6.TabIndex = 39;
             this.label6.Text = "ID";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(294, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(215, 197);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 38;
-            this.pictureBox1.TabStop = false;
-            // 
             // BuscarBoton
             // 
             this.BuscarBoton.BackColor = System.Drawing.Color.Transparent;
             this.BuscarBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BuscarBoton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BuscarBoton.Image = global::ProyectoFinalBeautyC.Properties.Resources.magnifier;
             this.BuscarBoton.Location = new System.Drawing.Point(188, 220);
             this.BuscarBoton.Name = "BuscarBoton";
-            this.BuscarBoton.Size = new System.Drawing.Size(65, 41);
+            this.BuscarBoton.Size = new System.Drawing.Size(50, 41);
             this.BuscarBoton.TabIndex = 32;
             this.BuscarBoton.UseVisualStyleBackColor = false;
             this.BuscarBoton.Click += new System.EventHandler(this.BuscarBoton_Click_1);
@@ -302,6 +294,7 @@
             this.GuardarBoton.BackColor = System.Drawing.Color.Khaki;
             this.GuardarBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GuardarBoton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GuardarBoton.Image = global::ProyectoFinalBeautyC.Properties.Resources.save;
             this.GuardarBoton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.GuardarBoton.Location = new System.Drawing.Point(354, 22);
             this.GuardarBoton.Name = "GuardarBoton";
@@ -317,6 +310,7 @@
             this.EliminarBoton.BackColor = System.Drawing.Color.Khaki;
             this.EliminarBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EliminarBoton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EliminarBoton.Image = global::ProyectoFinalBeautyC.Properties.Resources.delete;
             this.EliminarBoton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.EliminarBoton.Location = new System.Drawing.Point(644, 22);
             this.EliminarBoton.Name = "EliminarBoton";
@@ -332,6 +326,7 @@
             this.NuevoBoton.BackColor = System.Drawing.Color.Khaki;
             this.NuevoBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NuevoBoton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NuevoBoton.Image = global::ProyectoFinalBeautyC.Properties.Resources.add;
             this.NuevoBoton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.NuevoBoton.Location = new System.Drawing.Point(72, 22);
             this.NuevoBoton.Name = "NuevoBoton";
@@ -341,6 +336,16 @@
             this.NuevoBoton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.NuevoBoton.UseVisualStyleBackColor = false;
             this.NuevoBoton.Click += new System.EventHandler(this.NuevoBoton_Click_1);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProyectoFinalBeautyC.Properties.Resources.girl__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(294, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(215, 197);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 38;
+            this.pictureBox1.TabStop = false;
             // 
             // RegistroEmpleada
             // 
@@ -356,8 +361,8 @@
             this.Load += new System.EventHandler(this.RegistroEmpleada_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

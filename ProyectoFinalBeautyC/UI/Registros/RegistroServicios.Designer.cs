@@ -50,6 +50,7 @@
             this.EliminarBoton.BackColor = System.Drawing.Color.Khaki;
             this.EliminarBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EliminarBoton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EliminarBoton.Image = global::ProyectoFinalBeautyC.Properties.Resources.delete;
             this.EliminarBoton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.EliminarBoton.Location = new System.Drawing.Point(475, 343);
             this.EliminarBoton.Name = "EliminarBoton";
@@ -65,6 +66,7 @@
             this.GuardarBoton.BackColor = System.Drawing.Color.Khaki;
             this.GuardarBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GuardarBoton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GuardarBoton.Image = global::ProyectoFinalBeautyC.Properties.Resources.save;
             this.GuardarBoton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.GuardarBoton.Location = new System.Drawing.Point(267, 343);
             this.GuardarBoton.Name = "GuardarBoton";
@@ -80,6 +82,7 @@
             this.NuevoBoton.BackColor = System.Drawing.Color.Khaki;
             this.NuevoBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NuevoBoton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NuevoBoton.Image = global::ProyectoFinalBeautyC.Properties.Resources.add;
             this.NuevoBoton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.NuevoBoton.Location = new System.Drawing.Point(40, 343);
             this.NuevoBoton.Name = "NuevoBoton";
@@ -110,6 +113,7 @@
             this.BuscarBoton.BackColor = System.Drawing.Color.Transparent;
             this.BuscarBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BuscarBoton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BuscarBoton.Image = global::ProyectoFinalBeautyC.Properties.Resources.magnifier;
             this.BuscarBoton.Location = new System.Drawing.Point(205, 19);
             this.BuscarBoton.Name = "BuscarBoton";
             this.BuscarBoton.Size = new System.Drawing.Size(41, 41);

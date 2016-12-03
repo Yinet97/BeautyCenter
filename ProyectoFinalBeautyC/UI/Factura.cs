@@ -181,7 +181,6 @@ namespace ProyectoFinalBeautyC
                 f.Descuento = Convert.ToInt32(DescuentoTextBox.Text);
                 f.DescuentoPorciento = Convert.ToDouble(PorcientoDescuentoTextBox.Text);
                 f.Impuesto = Convert.ToInt32(ImpuestoTextBox.Text);
-                // f.ServicioId = 1;
                 f.NombreCliente = NombreClienteTextBox.Text;
                 f.MontoAdicional = Convert.ToInt32(MontoAdicionalTextBox.Text);
                 f.TipoPago = TipoPagoTextBox.Text;
@@ -201,12 +200,17 @@ namespace ProyectoFinalBeautyC
         {
             var fact = new Facturas();
             int id = Convert.ToInt32(IdTextBox.Text);
-
-            FacturasBll.Eliminar(id);
-           // ServiciosDataGridView.DataSource = null;
-           // ServiciosDataGridView.DataSource = fact.Service.Remove();
-            MessageBox.Show("Eliminad !");
-            Limpiar();
+            if(IdTextBox.Text == null)
+            {
+                MessageBox.Show("Dejaste el campo del ID vacio");
+            }
+            else
+            {
+                FacturasBll.Eliminar(id);
+                MessageBox.Show("Factura Eliminada !");
+                Limpiar();
+            }
+            
         }
 
         private void NuevoBoton_Click_1(object sender, EventArgs e)

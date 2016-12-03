@@ -59,7 +59,7 @@ namespace ProyectoFinalBeautyC.Registros
 
         private void BotonGuardar_Click(object sender, EventArgs e)
         {
-          //  string type = TiposComboBox.SelectedValue.ToString();
+            //string type = TiposComboBox.SelectedValue.ToString();
 
             if (string.IsNullOrEmpty(NombreTextBox.Text) || string.IsNullOrEmpty(ClaveTextBox.Text))
             {
@@ -74,7 +74,7 @@ namespace ProyectoFinalBeautyC.Registros
                 int.TryParse(IdTextBox.Text, out id);
                 user.Clave = ClaveTextBox.Text;
                 user.Nombre = NombreTextBox.Text;
-              //  user.Tipo = type;
+                //user.Tipo = type;
                 user.UsuarioId = id;
 
                 if (UsuariosBll.Insertar(user))
