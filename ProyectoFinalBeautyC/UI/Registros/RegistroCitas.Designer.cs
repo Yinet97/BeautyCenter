@@ -28,14 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroCitas));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ActualizarBoton = new System.Windows.Forms.Button();
             this.ListaCitaDataGridView = new System.Windows.Forms.DataGridView();
             this.ClienteGroupBox = new System.Windows.Forms.GroupBox();
+            this.BuscarClienteBoton = new System.Windows.Forms.Button();
             this.IdClienteTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.ClienteTextBox = new System.Windows.Forms.TextBox();
             this.CitaGroupBox1 = new System.Windows.Forms.GroupBox();
+            this.BuscarCitaBoton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.CitaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.IdCitaTextBox = new System.Windows.Forms.TextBox();
@@ -43,9 +47,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.ActualizarBoton = new System.Windows.Forms.Button();
-            this.BuscarClienteBoton = new System.Windows.Forms.Button();
-            this.BuscarCitaBoton = new System.Windows.Forms.Button();
             this.GuardarBoton = new System.Windows.Forms.Button();
             this.NuevoBoton = new System.Windows.Forms.Button();
             this.EliminarBoton = new System.Windows.Forms.Button();
@@ -67,6 +68,23 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(866, 395);
             this.panel1.TabIndex = 46;
+            // 
+            // ActualizarBoton
+            // 
+            this.ActualizarBoton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.ActualizarBoton.BackColor = System.Drawing.Color.Khaki;
+            this.ActualizarBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ActualizarBoton.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ActualizarBoton.Image = global::ProyectoFinalBeautyC.Properties.Resources.refresh;
+            this.ActualizarBoton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ActualizarBoton.Location = new System.Drawing.Point(388, 344);
+            this.ActualizarBoton.Name = "ActualizarBoton";
+            this.ActualizarBoton.Size = new System.Drawing.Size(132, 37);
+            this.ActualizarBoton.TabIndex = 46;
+            this.ActualizarBoton.Text = "Actualizar";
+            this.ActualizarBoton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ActualizarBoton.UseVisualStyleBackColor = false;
+            this.ActualizarBoton.Click += new System.EventHandler(this.ActualizarBoton_Click_1);
             // 
             // ListaCitaDataGridView
             // 
@@ -95,6 +113,22 @@
             this.ClienteGroupBox.TabIndex = 1;
             this.ClienteGroupBox.TabStop = false;
             this.ClienteGroupBox.Text = "Cliente";
+            // 
+            // BuscarClienteBoton
+            // 
+            this.BuscarClienteBoton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BuscarClienteBoton.BackColor = System.Drawing.Color.Transparent;
+            this.BuscarClienteBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BuscarClienteBoton.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BuscarClienteBoton.Image = global::ProyectoFinalBeautyC.Properties.Resources.magnifier;
+            this.BuscarClienteBoton.Location = new System.Drawing.Point(174, 31);
+            this.BuscarClienteBoton.Name = "BuscarClienteBoton";
+            this.BuscarClienteBoton.Size = new System.Drawing.Size(54, 37);
+            this.BuscarClienteBoton.TabIndex = 4;
+            this.BuscarClienteBoton.UseVisualStyleBackColor = false;
+            this.BuscarClienteBoton.Click += new System.EventHandler(this.BuscarClienteBoton_Click_1);
             // 
             // IdClienteTextBox
             // 
@@ -155,6 +189,20 @@
             this.CitaGroupBox1.TabIndex = 10;
             this.CitaGroupBox1.TabStop = false;
             this.CitaGroupBox1.Text = "Cita";
+            // 
+            // BuscarCitaBoton
+            // 
+            this.BuscarCitaBoton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.BuscarCitaBoton.BackColor = System.Drawing.Color.Transparent;
+            this.BuscarCitaBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BuscarCitaBoton.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BuscarCitaBoton.Image = global::ProyectoFinalBeautyC.Properties.Resources.magnifier;
+            this.BuscarCitaBoton.Location = new System.Drawing.Point(236, 30);
+            this.BuscarCitaBoton.Name = "BuscarCitaBoton";
+            this.BuscarCitaBoton.Size = new System.Drawing.Size(48, 36);
+            this.BuscarCitaBoton.TabIndex = 10;
+            this.BuscarCitaBoton.UseVisualStyleBackColor = false;
+            this.BuscarCitaBoton.Click += new System.EventHandler(this.BuscarCitaBoton_Click_1);
             // 
             // label1
             // 
@@ -238,53 +286,6 @@
             this.panel4.Size = new System.Drawing.Size(1124, 181);
             this.panel4.TabIndex = 49;
             // 
-            // ActualizarBoton
-            // 
-            this.ActualizarBoton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.ActualizarBoton.BackColor = System.Drawing.Color.Khaki;
-            this.ActualizarBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ActualizarBoton.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ActualizarBoton.Image = global::ProyectoFinalBeautyC.Properties.Resources.refresh;
-            this.ActualizarBoton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ActualizarBoton.Location = new System.Drawing.Point(388, 344);
-            this.ActualizarBoton.Name = "ActualizarBoton";
-            this.ActualizarBoton.Size = new System.Drawing.Size(132, 37);
-            this.ActualizarBoton.TabIndex = 46;
-            this.ActualizarBoton.Text = "Actualizar";
-            this.ActualizarBoton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ActualizarBoton.UseVisualStyleBackColor = false;
-            this.ActualizarBoton.Click += new System.EventHandler(this.ActualizarBoton_Click_1);
-            // 
-            // BuscarClienteBoton
-            // 
-            this.BuscarClienteBoton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.BuscarClienteBoton.BackColor = System.Drawing.Color.Transparent;
-            this.BuscarClienteBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BuscarClienteBoton.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BuscarClienteBoton.Image = global::ProyectoFinalBeautyC.Properties.Resources.magnifier;
-            this.BuscarClienteBoton.Location = new System.Drawing.Point(174, 31);
-            this.BuscarClienteBoton.Name = "BuscarClienteBoton";
-            this.BuscarClienteBoton.Size = new System.Drawing.Size(54, 37);
-            this.BuscarClienteBoton.TabIndex = 4;
-            this.BuscarClienteBoton.UseVisualStyleBackColor = false;
-            this.BuscarClienteBoton.Click += new System.EventHandler(this.BuscarClienteBoton_Click_1);
-            // 
-            // BuscarCitaBoton
-            // 
-            this.BuscarCitaBoton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.BuscarCitaBoton.BackColor = System.Drawing.Color.Transparent;
-            this.BuscarCitaBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BuscarCitaBoton.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BuscarCitaBoton.Image = global::ProyectoFinalBeautyC.Properties.Resources.magnifier;
-            this.BuscarCitaBoton.Location = new System.Drawing.Point(236, 30);
-            this.BuscarCitaBoton.Name = "BuscarCitaBoton";
-            this.BuscarCitaBoton.Size = new System.Drawing.Size(48, 36);
-            this.BuscarCitaBoton.TabIndex = 10;
-            this.BuscarCitaBoton.UseVisualStyleBackColor = false;
-            this.BuscarCitaBoton.Click += new System.EventHandler(this.BuscarCitaBoton_Click_1);
-            // 
             // GuardarBoton
             // 
             this.GuardarBoton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -345,6 +346,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegistroCitas";
             this.Text = "RegistroCitas";
             this.Load += new System.EventHandler(this.RegistroCitas_Load);

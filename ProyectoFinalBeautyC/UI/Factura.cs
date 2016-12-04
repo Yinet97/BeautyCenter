@@ -163,6 +163,7 @@ namespace ProyectoFinalBeautyC
         private void GuardarBoton_Click_1(object sender, EventArgs e)
         {
             BeautyCenterDb db = new BeautyCenterDb();
+            Facturas fact = new Facturas();
 
             string var = (from c in db.Cliente where c.Nombre == NombreClienteTextBox.Text select c.Nombre).FirstOrDefault();
 
@@ -225,12 +226,6 @@ namespace ProyectoFinalBeautyC
 
             MaximizeBox = false;
             MinimizeBox = false;
-        }
-
-        private void EliminarSeleccionBoton_Click(object sender, EventArgs e)
-        {
-            // ServiciosDataGridView.Rows.RemoveAt(ServiciosDataGridView.CurrentRow.Index);
-
         }
     }
 }

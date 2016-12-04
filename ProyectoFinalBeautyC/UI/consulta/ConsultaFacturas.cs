@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using DAL;
 
 namespace ProyectoFinalBeautyC.UI.Consultas
 {
@@ -37,6 +38,16 @@ namespace ProyectoFinalBeautyC.UI.Consultas
         {
             UI.Reportes.ReporteFacturas rf = new Reportes.ReporteFacturas();
             rf.Show();
+        }
+
+        private void FiltrarFechaBoton_Click(object sender, EventArgs e)
+        {
+            BeautyCenterDb db = new BeautyCenterDb();
+
+            if (DesdeDateTimePicker.Value.Date < HastaDateTimePicker.Value.Date)
+            {
+                listadoConsulta.DataSource = FacturasBll.GetListaFecha(DesdeDateTimePicker.Value.Date, HastaDateTimePicker.Value.Date);
+            }
         }
     }
 }

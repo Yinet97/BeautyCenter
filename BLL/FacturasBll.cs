@@ -90,5 +90,14 @@ namespace BLL
             lista = db.Factura.Where(u => u.FacturaId == id).ToList();
             return lista;
         }
+
+        public static List<Facturas> GetListaFecha(DateTime desde, DateTime hasta)
+        {
+            List<Facturas> lista = new List<Facturas>();
+            BeautyCenterDb db = new BeautyCenterDb();
+
+            lista = db.Factura.Where(u => u.Fecha >= desde.Date && u.Fecha <= hasta).ToList();
+            return lista;
+        }
     }
 }

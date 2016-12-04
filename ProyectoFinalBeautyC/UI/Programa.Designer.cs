@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Programa));
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.FacturarBoton = new System.Windows.Forms.Button();
@@ -184,42 +185,42 @@
             // usuariosToolStripMenuItem
             // 
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click_1);
             // 
             // empleadasToolStripMenuItem
             // 
             this.empleadasToolStripMenuItem.Name = "empleadasToolStripMenuItem";
-            this.empleadasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.empleadasToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.empleadasToolStripMenuItem.Text = "Empleadas";
             this.empleadasToolStripMenuItem.Click += new System.EventHandler(this.empleadasToolStripMenuItem_Click_1);
             // 
             // clientesToolStripMenuItem1
             // 
             this.clientesToolStripMenuItem1.Name = "clientesToolStripMenuItem1";
-            this.clientesToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.clientesToolStripMenuItem1.Size = new System.Drawing.Size(146, 22);
             this.clientesToolStripMenuItem1.Text = "Clientes";
             this.clientesToolStripMenuItem1.Click += new System.EventHandler(this.clientesToolStripMenuItem1_Click_1);
             // 
             // serviciosToolStripMenuItem1
             // 
             this.serviciosToolStripMenuItem1.Name = "serviciosToolStripMenuItem1";
-            this.serviciosToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.serviciosToolStripMenuItem1.Size = new System.Drawing.Size(146, 22);
             this.serviciosToolStripMenuItem1.Text = "Servicios";
             this.serviciosToolStripMenuItem1.Click += new System.EventHandler(this.serviciosToolStripMenuItem1_Click_1);
             // 
             // citasToolStripMenuItem
             // 
             this.citasToolStripMenuItem.Name = "citasToolStripMenuItem";
-            this.citasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.citasToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.citasToolStripMenuItem.Text = "Citas";
             this.citasToolStripMenuItem.Click += new System.EventHandler(this.citasToolStripMenuItem_Click_1);
             // 
             // facturasToolStripMenuItem
             // 
             this.facturasToolStripMenuItem.Name = "facturasToolStripMenuItem";
-            this.facturasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.facturasToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.facturasToolStripMenuItem.Text = "Facturas";
             this.facturasToolStripMenuItem.Click += new System.EventHandler(this.facturasToolStripMenuItem_Click_1);
             // 
@@ -238,35 +239,35 @@
             // clientesToolStripMenuItem2
             // 
             this.clientesToolStripMenuItem2.Name = "clientesToolStripMenuItem2";
-            this.clientesToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.clientesToolStripMenuItem2.Size = new System.Drawing.Size(146, 22);
             this.clientesToolStripMenuItem2.Text = "Clientes";
             this.clientesToolStripMenuItem2.Click += new System.EventHandler(this.clientesToolStripMenuItem2_Click_1);
             // 
             // empleadasToolStripMenuItem1
             // 
             this.empleadasToolStripMenuItem1.Name = "empleadasToolStripMenuItem1";
-            this.empleadasToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.empleadasToolStripMenuItem1.Size = new System.Drawing.Size(146, 22);
             this.empleadasToolStripMenuItem1.Text = "Empleadas";
             this.empleadasToolStripMenuItem1.Click += new System.EventHandler(this.empleadasToolStripMenuItem1_Click_1);
             // 
             // serviciosToolStripMenuItem2
             // 
             this.serviciosToolStripMenuItem2.Name = "serviciosToolStripMenuItem2";
-            this.serviciosToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.serviciosToolStripMenuItem2.Size = new System.Drawing.Size(146, 22);
             this.serviciosToolStripMenuItem2.Text = "Servicios";
             this.serviciosToolStripMenuItem2.Click += new System.EventHandler(this.serviciosToolStripMenuItem2_Click_1);
             // 
             // usuariosToolStripMenuItem1
             // 
             this.usuariosToolStripMenuItem1.Name = "usuariosToolStripMenuItem1";
-            this.usuariosToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.usuariosToolStripMenuItem1.Size = new System.Drawing.Size(146, 22);
             this.usuariosToolStripMenuItem1.Text = "Usuarios";
             this.usuariosToolStripMenuItem1.Click += new System.EventHandler(this.usuariosToolStripMenuItem1_Click_1);
             // 
             // facturasToolStripMenuItem1
             // 
             this.facturasToolStripMenuItem1.Name = "facturasToolStripMenuItem1";
-            this.facturasToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.facturasToolStripMenuItem1.Size = new System.Drawing.Size(146, 22);
             this.facturasToolStripMenuItem1.Text = "Facturas";
             this.facturasToolStripMenuItem1.Click += new System.EventHandler(this.facturasToolStripMenuItem1_Click_1);
             // 
@@ -288,6 +289,7 @@
             this.Controls.Add(this.FacturarBoton);
             this.Controls.Add(this.CitasBoton);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Programa";
             this.Text = "Programa";
             this.Load += new System.EventHandler(this.Programa_Load);

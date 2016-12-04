@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroEmpleada));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BuscarBoton = new System.Windows.Forms.Button();
             this.FechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
@@ -53,10 +55,9 @@
             this.GuardarBoton = new System.Windows.Forms.Button();
             this.EliminarBoton = new System.Windows.Forms.Button();
             this.NuevoBoton = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -96,6 +97,16 @@
             this.label6.Size = new System.Drawing.Size(30, 23);
             this.label6.TabIndex = 39;
             this.label6.Text = "ID";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProyectoFinalBeautyC.Properties.Resources.girl__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(294, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(215, 197);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 38;
+            this.pictureBox1.TabStop = false;
             // 
             // BuscarBoton
             // 
@@ -337,16 +348,6 @@
             this.NuevoBoton.UseVisualStyleBackColor = false;
             this.NuevoBoton.Click += new System.EventHandler(this.NuevoBoton_Click_1);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ProyectoFinalBeautyC.Properties.Resources.girl__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(294, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(215, 197);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 38;
-            this.pictureBox1.TabStop = false;
-            // 
             // RegistroEmpleada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -356,13 +357,14 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegistroEmpleada";
             this.Text = "Registro Empleada";
             this.Load += new System.EventHandler(this.RegistroEmpleada_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

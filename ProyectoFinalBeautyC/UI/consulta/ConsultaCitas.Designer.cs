@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultaCitas));
             this.ImprmirReporte = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -54,6 +55,7 @@
             this.ImprmirReporte.TabIndex = 27;
             this.ImprmirReporte.Text = "Imprimir Reporte";
             this.ImprmirReporte.UseVisualStyleBackColor = false;
+            this.ImprmirReporte.Click += new System.EventHandler(this.ImprmirReporte_Click_1);
             // 
             // label4
             // 
@@ -111,6 +113,7 @@
             this.FiltrarFechaBoton.TabIndex = 22;
             this.FiltrarFechaBoton.Text = "Filtrar";
             this.FiltrarFechaBoton.UseVisualStyleBackColor = false;
+            this.FiltrarFechaBoton.Click += new System.EventHandler(this.FiltrarFechaBoton_Click_1);
             // 
             // HastaDateTimePicker
             // 
@@ -180,6 +183,7 @@
             this.Controls.Add(this.textBoxID);
             this.Controls.Add(this.BotonBuscar);
             this.Controls.Add(this.listadoConsulta);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ConsultaCitas";
             this.Text = "ConsultaCitas";
             ((System.ComponentModel.ISupportInitialize)(this.listadoConsulta)).EndInit();

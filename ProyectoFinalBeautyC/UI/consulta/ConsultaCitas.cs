@@ -35,9 +35,8 @@ namespace ProyectoFinalBeautyC.UI.Consultas
             listadoConsulta.DataSource = lista;
 
         }
-
-
-        private void FiltrarFechaBoton_Click(object sender, EventArgs e)
+        
+        private void FiltrarFechaBoton_Click_1(object sender, EventArgs e)
         {
             BeautyCenterDb db = new BeautyCenterDb();
 
@@ -46,7 +45,8 @@ namespace ProyectoFinalBeautyC.UI.Consultas
                 listadoConsulta.DataSource = CitasBll.GetListaFecha(DesdeDateTimePicker.Value.Date, HastaDateTimePicker.Value.Date);
             }
         }
-        private void ImprmirReporte_Click(object sender, EventArgs e)
+
+        private void ImprmirReporte_Click_1(object sender, EventArgs e)
         {
             UI.Reportes.ReporteCitas rc = new UI.Reportes.ReporteCitas();
             rc.Show();

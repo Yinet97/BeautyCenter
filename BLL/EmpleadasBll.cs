@@ -81,5 +81,14 @@ namespace BLL
             }
             return emp;
         }
+
+        public static List<Empleadas> GetListaFecha(DateTime desde, DateTime hasta)
+        {
+            List<Empleadas> lista = new List<Empleadas>();
+            BeautyCenterDb db = new BeautyCenterDb();
+
+            lista = db.Empleada.Where(u => u.FechaEntrada >= desde.Date && u.FechaEntrada <= hasta).ToList();
+            return lista;
+        }
     }
 }

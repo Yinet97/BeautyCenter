@@ -88,19 +88,34 @@ namespace ProyectoFinalBeautyC.Registros
 
         private void BotonEliminar_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(IdTextBox.Text);
+            if(string.IsNullOrEmpty(IdTextBox.Text) )
+            {
+                MessageBox.Show("Dejaste el campo ID vacio");
+            }
+            else
+            {
+                int id = Convert.ToInt32(IdTextBox.Text);
 
-            UsuariosBll.Eliminar(id);
-            MessageBox.Show("Eliminado !");
-            LimpiarCampos();
+                UsuariosBll.Eliminar(id);
+                MessageBox.Show("Eliminado !");
+                LimpiarCampos();
+            }
+            
         }
 
         private void BotonNuevo_Click(object sender, EventArgs e)
         {
             LimpiarCampos();
         }
+        
 
-        private void BotonBuscar_Click(object sender, EventArgs e)
+        private void RegistroTiposUsuarios_Load_1(object sender, EventArgs e)
+        {
+            MaximizeBox = false;
+            MinimizeBox = false;
+        }
+
+        private void BuscarBoton_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(IdTextBox.Text);
 
@@ -112,12 +127,6 @@ namespace ProyectoFinalBeautyC.Registros
             {
                 BuscarID();
             }
-        }
-
-        private void RegistroTiposUsuarios_Load_1(object sender, EventArgs e)
-        {
-            MaximizeBox = false;
-            MinimizeBox = false;
         }
     }
 }

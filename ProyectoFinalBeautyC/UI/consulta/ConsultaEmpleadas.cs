@@ -40,5 +40,15 @@ namespace ProyectoFinalBeautyC.UI.Consultas
             Reportes.ReporteEmpleadas re = new Reportes.ReporteEmpleadas();
             re.Show();
         }
+
+        private void FiltrarFechaBoton_Click(object sender, EventArgs e)
+        {
+            DAL.BeautyCenterDb db = new DAL.BeautyCenterDb();
+
+            if (DesdeDateTimePicker.Value.Date < HastaDateTimePicker.Value.Date)
+            {
+                listadoConsulta.DataSource = EmpleadasBll.GetListaFecha(DesdeDateTimePicker.Value.Date, HastaDateTimePicker.Value.Date);
+            }
+        }
     }
 }
